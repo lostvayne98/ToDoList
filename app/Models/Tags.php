@@ -11,7 +11,7 @@ class Tags extends Model
 
     protected $fillable = [
         'user_id',
-        'list_id',
+        'lists_id',
         'name'
     ];
 }

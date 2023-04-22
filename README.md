@@ -62,3 +62,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Описание как развернуть для полного функционала
+
+composer install --ingnore-platform-reqs
+
+php artisan storage:link
+
+php artisan migrate
+
+php -v = 7.3
+
+php artisan db:seed --class=DatabaseSeeder // авторизация за любого пользователя желательно за id 1
+php artisan db:seed --class=ListSeeder // создаст записи без тегов
+php artisan db:seed --class=TagSeeder // создаст теги к существующим записям
+
