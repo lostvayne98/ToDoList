@@ -7,8 +7,11 @@
                 <input type="text" class="form-control" name="name" id="name" value="{{ request('name') }}"
                        placeholder="Enter name">
             </div>
+            @if(!empty($tags))
             <div class="form-group">
                 <label for="tags">Tags:</label>
+
+
                 @foreach($tags as $tag)
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="tags[]" value="{{ $tag->name }}"
@@ -18,7 +21,10 @@
                         </label>
                     </div>
                 @endforeach
+
+
             </div>
+            @endif
             <button type="submit" class="btn btn-success mt-5">Search</button>
         </form>
     </div>
